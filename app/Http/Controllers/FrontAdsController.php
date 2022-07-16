@@ -11,7 +11,9 @@ class FrontAdsController extends Controller
     public function index()
     {
         // for category Echange
-      
+        $category = Category::CategoryEchange();
+        $firstAds = Advertisement::firstFourAdsInCaurosel($category->id);
+        $secondsAds = Advertisement::secondFourAdsInCaurosel($category->id);
 
         // get all categories
 
